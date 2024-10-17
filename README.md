@@ -92,20 +92,15 @@ To run this project, you will need the following tools and libraries:
 3. **Customization**: You can customize the cities and time ranges by modifying the notebook code. Simply adjust the URLs or scraping parameters to fetch data for different cities or periods.
 
 ## 🔍 Results and Conclusions
-
-- **Intermediate Outputs**: CSV files will be saved for each city as checkpoints. These can be found in the `data/` directory.
 - **Final Output**: A final, cleaned dataset will be generated, containing weather information for all the selected cities.
-- **Analysis**: The collected data will provide insights into temperature patterns, precipitation trends, and wind conditions, helping the production team plan for optimal weather conditions at various filming locations.
+- **Analysis**: The collected data, when analysed will provide insights into temperature patterns, precipitation trends, and wind conditions, helping the production team plan for optimal weather conditions at various filming locations.
 
-The notebook also includes some visualizations (e.g., line plots for temperature over time) to assist in interpreting the data.
 
 ## 🔄 Next Steps
 
 Some possible enhancements for the project include:
-1. **Expand city selection**: Add more cities or automate the selection process to scrape data for any number of cities.
-2. **Improve data handling**: Implement better error handling and retries for failed requests.
-3. **Extend date ranges**: Collect weather data from previous years to understand longer-term trends.
-4. **Visualization**: Add more advanced data visualization for weather patterns (e.g., heatmaps or trend analysis).
+1. **Analysis & Visualization**: Add more advanced data visualization for weather patterns (e.g., heatmaps or trend analysis).
+2. **Compare with AEMET data**: Contrast the scraped data with the AEMET database and assess information consistency.
 
 ## 🐛 Troubleshooting
 
