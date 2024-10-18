@@ -1,20 +1,37 @@
-from concurrent.futures import ThreadPoolExecutor, as_completed
+# Importamos las librerías que necesitamos
+
+# Librerías de extracción de datos
+# -----------------------------------------------------------------------
+
+# Importaciones:
+# Beautifulsoup
+from bs4 import BeautifulSoup
+
+# Requests
+import requests
+
 import pandas as pd
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+import numpy as np
+
+from time import sleep
+
+# Importar librerías para automatización de navegadores web con Selenium
+# -----------------------------------------------------------------------
+from selenium import webdriver  # Selenium es una herramienta para automatizar la interacción con navegadores web.
+from webdriver_manager.chrome import ChromeDriverManager  # ChromeDriverManager gestiona la instalación del controlador de Chrome.
+from selenium.webdriver.common.keys import Keys  # Keys es útil para simular eventos de teclado en Selenium.
+from selenium.webdriver.support.ui import Select  # Select se utiliza para interactuar con elementos <select> en páginas web.
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import datetime
+from selenium.common.exceptions import NoSuchElementException # Excepciones comunes de selenium que nos podemos encontrar 
 from selenium.webdriver.chrome.options import Options
 
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import pandas as pd
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from geopy.geocoders import Nominatim
+geolocator = Nominatim(user_agent="my-geopy-app")
+import random
+import re
 import datetime
-from selenium.webdriver.chrome.options import Options
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def handle_cookies(driver):
     driver.maximize_window()
